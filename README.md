@@ -106,4 +106,8 @@ run
 aircrack-ng WEP.pcap
 aircrack-ng -a2 -w passwords.txt WPA2.pcap
 ```
- 
+```
+https://www.shodan.io 
+port:1883 ==> MQTT
+ICS/SCADA systems port:502
+```
