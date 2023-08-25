@@ -4,6 +4,8 @@ Geolocation BillCipher
 
 ```
 nmap --script vuln xx.xx.xx.xx
+
+https://nvd.nist.gov
 ```
 
 ```
