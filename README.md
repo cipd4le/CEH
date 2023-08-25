@@ -26,6 +26,9 @@ whatweb www.certifiedhacker.com
 ```
 john --format=NT hashes.txt
 john --show --format=NT
+
+https://hashes.com/en/decrypt/hash
+https://crackstation.net/
 ```
 
 ```
